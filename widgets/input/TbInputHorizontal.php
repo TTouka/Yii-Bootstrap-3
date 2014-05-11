@@ -16,16 +16,6 @@ Yii::import('bootstrap.widgets.input.BootInput');
 class TbInputHorizontal extends TbInput
 {
 	/**
-	 * Runs the widget.
-	 */
-	public function run()
-	{
-		echo CHtml::openTag('div', array('class'=>'control-group '.$this->getContainerCssClass()));
-		parent::run();
-		echo '</div>';
-	}
-
-	/**
 	 * Returns the label for this block.
 	 * @return string the label
 	 */
@@ -47,11 +37,12 @@ class TbInputHorizontal extends TbInput
 	{
 		$attribute = $this->attribute;
 		echo '<div class="col-sm-offset-2 col-sm-10">';
-		echo '<label class="checkbox" for="'.$this->getAttributeId($attribute).'">';
+		echo '<div class="checkbox">';
+		echo '<label for="'.$this->getAttributeId($attribute).'">';
 		echo $this->form->checkBox($this->model, $attribute, $this->htmlOptions).PHP_EOL;
 		echo $this->model->getAttributeLabel($attribute);
 		echo $this->getError().$this->getHint();
-		echo '</label></div>';
+		echo '</label></div></div>';
 	}
 
 	/**
@@ -126,11 +117,12 @@ class TbInputHorizontal extends TbInput
 	{
 		$attribute = $this->attribute;
 		echo '<div class="col-sm-offset-2 col-sm-10">';
-		echo '<label class="radio" for="'.$this->getAttributeId($attribute).'">';
+		echo '<div class="radio">';
+		echo '<label for="'.$this->getAttributeId($attribute).'">';
 		echo $this->form->radioButton($this->model, $attribute, $this->htmlOptions).PHP_EOL;
 		echo $this->model->getAttributeLabel($attribute);
 		echo $this->getError().$this->getHint();
-		echo '</label></div>';
+		echo '</label></div></div>';
 	}
 
 	/**

@@ -91,6 +91,7 @@ abstract class TbInput extends CInputWidget
 	{
 		if (!isset($this->form))
 			throw new CException(__CLASS__.': Failed to initialize widget! Form is not set.');
+        $this->form->errorMessageCssClass = 'help-block';
 
 		if (!isset($this->model))
 			throw new CException(__CLASS__.': Failed to initialize widget! Model is not set.');
@@ -183,7 +184,7 @@ abstract class TbInput extends CInputWidget
 	 */
 	public function run()
 	{
-        echo '<div class="form-group">';
+        echo CHtml::openTag('div', array('class' => $this->getContainerCssClass()));
 		switch ($this->type)
 		{
 			case self::TYPE_CHECKBOX:
@@ -251,12 +252,17 @@ abstract class TbInput extends CInputWidget
 	 */
 	protected function getLabel()
 	{
+        $label = '';
 		if ($this->label !== false && !in_array($this->type, array('checkbox', 'radio')) && $this->hasModel())
-			return $this->form->labelEx($this->model, $this->attribute, $this->labelOptions);
+        {
+            $errorCss = CHtml::$errorCss;
+            CHtml::$errorCss = '';
+			$label = $this->form->labelEx($this->model, $this->attribute, $this->labelOptions);
+            CHtml::$errorCss = $errorCss;
+        }
 		else if ($this->label !== null)
-			return $this->label;
-		else
-			return '';
+			 $label = $this->label;
+        return $label;
 	}
 
 	/**
@@ -329,7 +335,11 @@ abstract class TbInput extends CInputWidget
 	 */
 	protected function getError()
 	{
-		return $this->form->error($this->model, $this->attribute, $this->errorOptions);
+        $tag = CHtml::$errorContainerTag;
+        CHtml::$errorContainerTag = 'p';
+		$error = $this->form->error($this->model, $this->attribute, $this->errorOptions);
+        CHtml::$errorContainerTag = $tag;
+		return $error;
 	}
 
 	/**
@@ -359,8 +369,7 @@ abstract class TbInput extends CInputWidget
 	 */
 	protected function getContainerCssClass()
 	{
-		$attribute = $this->attribute;
-		return $this->model->hasErrors(CHtml::resolveName($this->model, $attribute)) ? CHtml::$errorCss : '';
+		return $this->model->hasErrors($this->attribute) ? 'form-group has-error' : 'form-group';
 	}
 
 	/**
