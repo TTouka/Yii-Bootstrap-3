@@ -183,6 +183,7 @@ abstract class TbInput extends CInputWidget
 	 */
 	public function run()
 	{
+        echo '<div class="form-group">';
 		switch ($this->type)
 		{
 			case self::TYPE_CHECKBOX:
@@ -241,6 +242,7 @@ abstract class TbInput extends CInputWidget
 			default:
 				throw new CException(__CLASS__.': Failed to run widget! Type is invalid.');
 		}
+        echo '</div>';
 	}
 
 	/**
@@ -268,9 +270,9 @@ abstract class TbInput extends CInputWidget
 			$htmlOptions = $this->prependOptions;
 
 			if (isset($htmlOptions['class']))
-				$htmlOptions['class'] .= ' add-on';
+				$htmlOptions['class'] .= '  input-group-addon';
 			else
-				$htmlOptions['class'] = 'add-on';
+				$htmlOptions['class'] = 'input-group-addon';
 
 			ob_start();
 			echo '<div class="'.$this->getAddonCssClass().'">';
@@ -294,9 +296,9 @@ abstract class TbInput extends CInputWidget
 			$htmlOptions = $this->appendOptions;
 
 			if (isset($htmlOptions['class']))
-				$htmlOptions['class'] .= ' add-on';
+				$htmlOptions['class'] .= ' input-group-addon';
 			else
-				$htmlOptions['class'] = 'add-on';
+				$htmlOptions['class'] = 'input-group-addon';
 
 			ob_start();
 			if (isset($this->appendText))
@@ -368,10 +370,7 @@ abstract class TbInput extends CInputWidget
 	protected function getAddonCssClass()
 	{
 		$classes = array();
-		if (isset($this->prependText))
-			$classes[] = 'input-prepend';
-		if (isset($this->appendText))
-			$classes[] = 'input-append';
+        $classes[] = 'input-group';
 
 		return implode(' ', $classes);
 	}

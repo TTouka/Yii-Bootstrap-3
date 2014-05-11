@@ -3,7 +3,7 @@
     <legend><?php echo CHtml::encode($language); ?> translation</legend>
 
     <?php echo $form->textFieldRow($model, "[{$locale}]textField"); ?>
-    <?php echo $form->textAreaRow($model, "[{$locale}]textarea", array('class'=>'span8', 'rows'=>8)); ?>
+    <?php echo $form->textAreaRow($model, "[{$locale}]textarea", array('rows'=>8)); ?>
     <?php echo $form->checkBoxListRow($model, "[{$locale}]checkboxes", array(
         'Option one is this and that—be sure to include why it\'s great',
         'Option two can also be checked and included in form results',

@@ -32,9 +32,9 @@ class TbInputHorizontal extends TbInput
 	protected function getLabel()
 	{
 		if (isset($this->labelOptions['class']))
-			$this->labelOptions['class'] .= ' control-label';
+			$this->labelOptions['class'] .= ' col-sm-2 control-label';
 		else
-			$this->labelOptions['class'] = 'control-label';
+			$this->labelOptions['class'] = 'col-sm-2 control-label';
 
 		return parent::getLabel();
 	}
@@ -46,7 +46,7 @@ class TbInputHorizontal extends TbInput
 	protected function checkBox()
 	{
 		$attribute = $this->attribute;
-		echo '<div class="controls">';
+		echo '<div class="col-sm-offset-2 col-sm-10">';
 		echo '<label class="checkbox" for="'.$this->getAttributeId($attribute).'">';
 		echo $this->form->checkBox($this->model, $attribute, $this->htmlOptions).PHP_EOL;
 		echo $this->model->getAttributeLabel($attribute);
@@ -61,7 +61,7 @@ class TbInputHorizontal extends TbInput
 	protected function checkBoxList()
 	{
 		echo $this->getLabel();
-		echo '<div class="controls">';
+		echo '<div class="col-sm-10">';
 		echo $this->form->checkBoxList($this->model, $this->attribute, $this->data, $this->htmlOptions);
 		echo $this->getError().$this->getHint();
 		echo '</div>';
@@ -84,7 +84,7 @@ class TbInputHorizontal extends TbInput
 	protected function dropDownList()
 	{
 		echo $this->getLabel();
-		echo '<div class="controls">';
+		echo '<div class="col-sm-10">';
 		echo $this->form->dropDownList($this->model, $this->attribute, $this->data, $this->htmlOptions);
 		echo $this->getError().$this->getHint();
 		echo '</div>';
@@ -97,7 +97,7 @@ class TbInputHorizontal extends TbInput
 	protected function fileField()
 	{
 		echo $this->getLabel();
-		echo '<div class="controls">';
+		echo '<div class="col-sm-10">';
 		echo $this->form->fileField($this->model, $this->attribute, $this->htmlOptions);
 		echo $this->getError().$this->getHint();
 		echo '</div>';
@@ -110,7 +110,7 @@ class TbInputHorizontal extends TbInput
 	protected function passwordField()
 	{
 		echo $this->getLabel();
-		echo '<div class="controls">';
+		echo '<div class="col-sm-10">';
 		echo $this->getPrepend();
 		echo $this->form->passwordField($this->model, $this->attribute, $this->htmlOptions);
 		echo $this->getAppend();
@@ -125,7 +125,7 @@ class TbInputHorizontal extends TbInput
 	protected function radioButton()
 	{
 		$attribute = $this->attribute;
-		echo '<div class="controls">';
+		echo '<div class="col-sm-offset-2 col-sm-10">';
 		echo '<label class="radio" for="'.$this->getAttributeId($attribute).'">';
 		echo $this->form->radioButton($this->model, $attribute, $this->htmlOptions).PHP_EOL;
 		echo $this->model->getAttributeLabel($attribute);
@@ -140,7 +140,7 @@ class TbInputHorizontal extends TbInput
 	protected function radioButtonList()
 	{
 		echo $this->getLabel();
-		echo '<div class="controls">';
+		echo '<div class="col-sm-10">';
 		echo $this->form->radioButtonList($this->model, $this->attribute, $this->data, $this->htmlOptions);
 		echo $this->getError().$this->getHint();
 		echo '</div>';
@@ -163,7 +163,7 @@ class TbInputHorizontal extends TbInput
 	protected function textArea()
 	{
 		echo $this->getLabel();
-		echo '<div class="controls">';
+		echo '<div class="col-sm-10">';
 		echo $this->form->textArea($this->model, $this->attribute, $this->htmlOptions);
 		echo $this->getError().$this->getHint();
 		echo '</div>';
@@ -176,7 +176,7 @@ class TbInputHorizontal extends TbInput
 	protected function textField()
 	{
 		echo $this->getLabel();
-		echo '<div class="controls">';
+		echo '<div class="col-sm-10">';
 		echo $this->getPrepend();
 		echo $this->form->textField($this->model, $this->attribute, $this->htmlOptions);
 		echo $this->getAppend();
@@ -191,7 +191,7 @@ class TbInputHorizontal extends TbInput
 	protected function captcha()
 	{
 		echo $this->getLabel();
-		echo '<div class="controls"><div class="captcha">';
+		echo '<div class="col-sm-10"><div class="captcha">';
 		echo '<div class="widget">'.$this->widget('CCaptcha', $this->captchaOptions, true).'</div>';
 		echo $this->form->textField($this->model, $this->attribute, $this->htmlOptions);
 		echo $this->getError().$this->getHint();
@@ -205,7 +205,7 @@ class TbInputHorizontal extends TbInput
 	protected function uneditableField()
 	{
 		echo $this->getLabel();
-		echo '<div class="controls">';
+		echo '<div class="col-sm-10">';
 		echo CHtml::tag('span', $this->htmlOptions, $this->model->{$this->attribute});
 		echo $this->getError().$this->getHint();
 		echo '</div>';

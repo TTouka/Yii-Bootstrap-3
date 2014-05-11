@@ -994,8 +994,8 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 		'htmlOptions'=>array('class'=>'well'),
 	)); ?>
 
-	<?php echo $form->textFieldRow($model, 'textField', array('class'=>'col-md-3')); ?>
-	<?php echo $form->passwordFieldRow($model, 'password', array('class'=>'col-md-3')); ?>
+	<?php echo $form->textFieldRow($model, 'textField'); ?>
+	<?php echo $form->passwordFieldRow($model, 'password'); ?>
 	<?php echo $form->checkboxRow($model, 'checkbox'); ?>
 	<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Login')); ?>
 
@@ -1009,8 +1009,8 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 	'htmlOptions'=>array('class'=>'well'),
 )); ?>
 
-<?php echo \$form->textFieldRow(\$model, 'textField', array('class'=>'col-md-3')); ?>
-<?php echo \$form->passwordFieldRow(\$model, 'password', array('class'=>'col-md-3')); ?>
+<?php echo \$form->textFieldRow(\$model, 'textField'); ?>
+<?php echo \$form->passwordFieldRow(\$model, 'password'); ?>
 <?php echo \$form->checkboxRow(\$model, 'checkbox'); ?>
 <?php \$this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Login')); ?>
 
@@ -1025,7 +1025,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 		'htmlOptions'=>array('class'=>'well'),
 	)); ?>
 
-	<?php echo $form->textFieldRow($model, 'textField', array('class'=>'input-medium', 'prepend'=>'<i class="icon-search"></i>')); ?>
+	<?php echo $form->textFieldRow($model, 'textField', array('class'=>'input-medium', 'prepend'=>'<i class="glyphicon glyphicon-search"></i>')); ?>
 	<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Go')); ?>
 
 	<?php $this->endWidget(); ?>
@@ -1039,7 +1039,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 	'htmlOptions'=>array('class'=>'well'),
 )); ?>
 
-<?php echo \$form->textFieldRow(\$model, 'textField', array('class'=>'input-medium', 'prepend'=>'<i class=\"icon-search\"></i>')); ?>
+<?php echo \$form->textFieldRow(\$model, 'textField', array('class'=>'input-medium', 'prepend'=>'<i class=\"glyphicon glyphicon-search\"></i>')); ?>
 <?php \$this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Go')); ?>
 
 <?php \$this->endWidget(); ?>"); ?>
@@ -1112,9 +1112,11 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 
 	</fieldset>
 
-	<div class="form-actions">
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
 		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Submit')); ?>
 		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reset')); ?>
+	  </div>
 	</div>
 
 	<?php $this->endWidget(); ?>
@@ -1155,9 +1157,11 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 
 </fieldset>
 
-<div class=\"form-actions\">
+<div class=\"form-group\">
+  <div class=\"col-sm-offset-2 col-sm-10\">
 	<?php \$this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Submit')); ?>
 	<?php \$this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reset')); ?>
+  </div>
 </div>
 
 <?php \$this->endWidget(); ?>"); ?>
@@ -1174,9 +1178,11 @@ Yii::app()->clientScript->registerScript('siteIndex', "
         'tabs'=>$this->getTabularFormTabs($form, $model),
     )); ?>
 
-    <div class="form-actions">
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
         <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Submit')); ?>
         <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reset')); ?>
+      </div>
     </div>
 
     <?php $this->endWidget(); ?>
@@ -1193,9 +1199,11 @@ Yii::app()->clientScript->registerScript('siteIndex', "
     'tabs'=>\$this->getTabularFormTabs(\$form, \$model),
 )); ?>
 
-<div class=\"form-actions\">
+<div class=\"form-group\">
+  <div class=\"col-sm-offset-2 col-sm-10\">
     <?php \$this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Submit')); ?>
     <?php \$this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reset')); ?>
+  </div>
 </div>
 
 <?php \$this->endWidget(); ?>"); ?>
@@ -1220,7 +1228,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
     <legend><?php echo CHtml::encode(\$language); ?> translation</legend>
 
     <?php echo \$form->textFieldRow(\$model, \"[{\$locale}]textField\"); ?>
-    <?php echo \$form->textAreaRow(\$model, \"[{\$locale}]textarea\", array('class'=>'col-md-8', 'rows'=>8)); ?>
+    <?php echo \$form->textAreaRow(\$model, \"[{\$locale}]textarea\", array('rows'=>8)); ?>
     <?php echo \$form->checkBoxListRow(\$model, \"[{\$locale}]checkboxes\", array(
         'Option one is this and that—be sure to include why it\'s great',
         'Option two can also be checked and included in form results',

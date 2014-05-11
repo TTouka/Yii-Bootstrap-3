@@ -45,10 +45,17 @@ class TbActiveForm extends CActiveForm
 	 */
 	public function init()
 	{
+        $formType = '';
+        if ($this->type === self::TYPE_VERTICAL)
+            $formType = 'form';
+        elseif ($this->type === self::TYPE_SEARCH)
+            $formType = 'form-inline';
+        else
+            $formType = 'form-'.$this->type;
 		if (!isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] = 'form-'.$this->type;
+			$this->htmlOptions['class'] = $formType;
 		else
-			$this->htmlOptions['class'] .= ' form-'.$this->type;
+			$this->htmlOptions['class'] .= ' '.$formType;
 
 		if (!isset($this->inlineErrors))
 			$this->inlineErrors = $this->type === self::TYPE_HORIZONTAL;
@@ -486,6 +493,13 @@ class TbActiveForm extends CActiveForm
 	 */
 	public function inputRow($type, $model, $attribute, $data = null, $htmlOptions = array())
 	{
+        if (in_array($type, array(TbInput::TYPE_DROPDOWN, TbInput::TYPE_PASSWORD, TbInput::TYPE_TEXTAREA, TbInput::TYPE_TEXT, TbInput::TYPE_UNEDITABLE)))
+        {
+            if (isset($htmlOptions['class']))
+                $htmlOptions['class'] .= " form-control";
+            else
+                $htmlOptions['class'] = "form-control";
+        }
 		ob_start();
 		$this->getOwner()->widget($this->getInputClassName(), array(
             'form'=>$this,
