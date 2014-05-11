@@ -44,7 +44,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 		</thead>
 		<tbody>
 			<tr><td>buttonType</td><td>string</td><td><code>link</code></td><td>Button callback type. Valid values are <code>link</code>, <code>button</code>, <code>submit</code>, <code>submitLink</code>, <code>reset</code>, <code>ajaxLink</code>, <code>ajaxButton</code> and <code>ajaxSubmit</code>.</td></tr>
-			<tr><td>type</td><td>string</td><td></td><td>Button type. Valid values are <code>primary</code>, <code>info</code>, <code>success</code>, <code>warning</code>, <code>danger</code>, <code>inverse</code> and <code>link</code>.</td></tr>
+			<tr><td>type</td><td>string</td><td></td><td>Button type. Valid values are <code>primary</code>, <code>info</code>, <code>success</code>, <code>warning</code>, <code>danger</code> and <code>link</code>.</td></tr>
 			<tr><td>size</td><td>string</td><td></td><td>Button size. Valid values are <code>lg</code>, <code>sm</code> and <code>xs</code></td></tr>
 			<tr><td>icon</td><td>string</td><td></td><td>Button icon, e.g. <code>ok</code> or <code>remove white</code>.</td></tr>
 			<tr><td>label</td><td>string</td><td></td><td>Button label text.</td></tr>
@@ -68,7 +68,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 	<h3>Examples</h3>
 
     <div class="row">
-        <div class="span3">
+        <div class="col-md-3">
             <h4>LG</h4>
             <p>
                 <?php $this->widget('bootstrap.widgets.TbButton', array(
@@ -80,7 +80,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
             </p>
         </div>
 
-        <div class="span3">
+        <div class="col-md-3">
             <h4>Normal</h4>
             <p>
                 <?php $this->widget('bootstrap.widgets.TbButton', array(
@@ -92,7 +92,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
             </p>
         </div>
 
-        <div class="span3">
+        <div class="col-md-3">
             <h4>SM</h4>
             <p>
                 <?php $this->widget('bootstrap.widgets.TbButton', array(
@@ -104,7 +104,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
             </p>
         </div>
 
-        <div class="span3">
+        <div class="col-md-3">
             <h4>XS</h4>
             <p>
                 <?php $this->widget('bootstrap.widgets.TbButton', array(
@@ -121,7 +121,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 
     <?php echo $phpLighter->highlight("<?php \$this->widget('bootstrap.widgets.TbButton', array(
 	'label'=>'Primary',
-	'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+	'type'=>'primary', // null, 'primary', 'info', 'success', 'warning' or 'danger'
 	'size'=>'lg', // null, 'lg', 'sm' or 'xs'
 )); ?>"); ?>
 
@@ -194,25 +194,13 @@ Yii::app()->clientScript->registerScript('siteIndex', "
                 )),
             ),
         )); ?>
-        <?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
-            'type'=>'inverse',
-            'buttons'=>array(
-                array('label'=>'Inverse', 'items'=>array(
-                    array('label'=>'Action', 'url'=>'#'),
-                    array('label'=>'Another action', 'url'=>'#'),
-                    array('label'=>'Something else', 'url'=>'#'),
-                    '---',
-                    array('label'=>'Separate link', 'url'=>'#'),
-                )),
-            ),
-        )); ?>
     </div>
 
     <h5>Source code</h5>
 
     <?php echo $phpLighter->highlight("<div class=\"btn-toolbar\">
 	<?php \$this->widget('bootstrap.widgets.TbButtonGroup', array(
-		'type'=>'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+		'type'=>'primary', // '', 'primary', 'info', 'success', 'warning' or 'danger'
 		'buttons'=>array(
 			array('label'=>'Action', 'items'=>array(
 				array('label'=>'Action', 'url'=>'#'),
@@ -292,26 +280,13 @@ Yii::app()->clientScript->registerScript('siteIndex', "
                 )),
             ),
         )); ?>
-        <?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
-        'type'=>'inverse',
-        'buttons'=>array(
-            array('label'=>'Inverse', 'url'=>'#'),
-            array('items'=>array(
-                array('label'=>'Action', 'url'=>'#'),
-                array('label'=>'Another action', 'url'=>'#'),
-                array('label'=>'Something else', 'url'=>'#'),
-                '---',
-                array('label'=>'Separate link', 'url'=>'#'),
-            )),
-        ),
-    )); ?>
     </div>
 
     <h5>Source code</h5>
 
     <?php echo $phpLighter->highlight("<div class=\"btn-toolbar\">
 	<?php \$this->widget('bootstrap.widgets.TbButtonGroup', array(
-	    'type'=>'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+	    'type'=>'primary', // '', 'primary', 'info', 'success', 'warning' or 'danger'
 		'buttons'=>array(
 			array('label'=>'Action', 'url'=>'#'),
 			array('items'=>array(
@@ -329,7 +304,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 
 	<div class="row">
 
-		<div class="span3">
+		<div class="col-md-3">
 
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'type'=>'primary',
@@ -416,7 +391,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 
     <div class="row">
 
-        <div class="span3">
+        <div class="col-md-3">
 
             <h4>Checkbox</h4>
 
@@ -433,7 +408,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 
         </div>
 
-        <div class="span3">
+        <div class="col-md-3">
 
             <h4>Radio</h4>
 
@@ -753,7 +728,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 					)),
 				),
 			),
-			'<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+			'<form class="navbar-search pull-left" action=""><input type="text" class="search-query col-md-2" placeholder="Search"></form>',
 			array(
 				'class'=>'bootstrap.widgets.TbMenu',
 				'htmlOptions'=>array('class'=>'pull-right'),
@@ -796,7 +771,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 					)),
 				),
 			),
-			'<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+			'<form class="navbar-search pull-left" action=""><input type="text" class="search-query col-md-2" placeholder="Search"></form>',
 			array(
 				'class'=>'bootstrap.widgets.TbMenu',
 				'htmlOptions'=>array('class'=>'pull-right'),
@@ -838,7 +813,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 				)),
 			),
 		),
-		'<form class=\"navbar-search pull-left\" action=\"\"><input type=\"text\" class=\"search-query span2\" placeholder=\"Search\"></form>',
+		'<form class=\"navbar-search pull-left\" action=\"\"><input type=\"text\" class=\"search-query col-md-2\" placeholder=\"Search\"></form>',
 		array(
 			'class'=>'bootstrap.widgets.TbMenu',
 			'htmlOptions'=>array('class'=>'pull-right'),
@@ -1019,8 +994,8 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 		'htmlOptions'=>array('class'=>'well'),
 	)); ?>
 
-	<?php echo $form->textFieldRow($model, 'textField', array('class'=>'span3')); ?>
-	<?php echo $form->passwordFieldRow($model, 'password', array('class'=>'span3')); ?>
+	<?php echo $form->textFieldRow($model, 'textField', array('class'=>'col-md-3')); ?>
+	<?php echo $form->passwordFieldRow($model, 'password', array('class'=>'col-md-3')); ?>
 	<?php echo $form->checkboxRow($model, 'checkbox'); ?>
 	<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Login')); ?>
 
@@ -1034,8 +1009,8 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 	'htmlOptions'=>array('class'=>'well'),
 )); ?>
 
-<?php echo \$form->textFieldRow(\$model, 'textField', array('class'=>'span3')); ?>
-<?php echo \$form->passwordFieldRow(\$model, 'password', array('class'=>'span3')); ?>
+<?php echo \$form->textFieldRow(\$model, 'textField', array('class'=>'col-md-3')); ?>
+<?php echo \$form->passwordFieldRow(\$model, 'password', array('class'=>'col-md-3')); ?>
 <?php echo \$form->checkboxRow(\$model, 'checkbox'); ?>
 <?php \$this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Login')); ?>
 
@@ -1117,7 +1092,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 		<?php echo $form->dropDownListRow($model, 'multiDropdown', array('1', '2', '3', '4', '5'),
 				array('multiple'=>true)); ?>
 		<?php echo $form->fileFieldRow($model, 'fileField'); ?>
-		<?php echo $form->textAreaRow($model, 'textarea', array('class'=>'span8', 'rows'=>5)); ?>
+		<?php echo $form->textAreaRow($model, 'textarea', array('class'=>'col-md-8', 'rows'=>5)); ?>
 		<?php echo $form->uneditableRow($model, 'uneditable', array('class'=>'input-large')); ?>
 		<?php echo $form->textFieldRow($model, 'disabled', array('disabled'=>true)); ?>
 		<?php echo $form->textFieldRow($model, 'prepend', array('prepend'=>'@')); ?>
@@ -1160,7 +1135,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 	<?php echo \$form->dropDownListRow(\$model, 'dropdown', array('Something ...', '1', '2', '3', '4', '5')); ?>
 	<?php echo \$form->dropDownListRow(\$model, 'multiDropdown', array('1', '2', '3', '4', '5'), array('multiple'=>true)); ?>
 	<?php echo \$form->fileFieldRow(\$model, 'fileField'); ?>
-	<?php echo \$form->textAreaRow(\$model, 'textarea', array('class'=>'span8', 'rows'=>5)); ?>
+	<?php echo \$form->textAreaRow(\$model, 'textarea', array('class'=>'col-md-8', 'rows'=>5)); ?>
 	<?php echo \$form->uneditableRow(\$model, 'uneditable'); ?>
 	<?php echo \$form->textFieldRow(\$model, 'disabled', array('disabled'=>true)); ?>
 	<?php echo \$form->textFieldRow(\$model, 'prepend', array('prepend'=>'@')); ?>
@@ -1245,7 +1220,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
     <legend><?php echo CHtml::encode(\$language); ?> translation</legend>
 
     <?php echo \$form->textFieldRow(\$model, \"[{\$locale}]textField\"); ?>
-    <?php echo \$form->textAreaRow(\$model, \"[{\$locale}]textarea\", array('class'=>'span8', 'rows'=>8)); ?>
+    <?php echo \$form->textAreaRow(\$model, \"[{\$locale}]textarea\", array('class'=>'col-md-8', 'rows'=>8)); ?>
     <?php echo \$form->checkBoxListRow(\$model, \"[{\$locale}]checkboxes\", array(
         'Option one is this and that—be sure to include why it\'s great',
         'Option two can also be checked and included in form results',
@@ -1334,7 +1309,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 	'itemView'=>'_thumb',
 )); ?>"); ?>
 
-    <?php echo $htmlLighter->highlight("<li class=\"span3\">
+    <?php echo $htmlLighter->highlight("<li class=\"col-md-3\">
 	<a href=\"#\" class=\"thumbnail\" rel=\"tooltip\" data-title=\"Tooltip\">
 		<img src=\"http://placehold.it/280x180\" alt=\"\">
 	</a>
@@ -1427,7 +1402,7 @@ Yii::app()->user->setFlash('error', '<strong>Oh snap!</strong> Change a few thin
 
     <div class="row">
 
-        <div class="span4">
+        <div class="col-md-4">
 
             <h4>Basic</h4>
 
@@ -1437,7 +1412,7 @@ Yii::app()->user->setFlash('error', '<strong>Oh snap!</strong> Change a few thin
 
         </div>
 
-        <div class="span4">
+        <div class="col-md-4">
 
             <h4>Striped</h4>
 
@@ -1449,7 +1424,7 @@ Yii::app()->user->setFlash('error', '<strong>Oh snap!</strong> Change a few thin
 
         </div>
 
-        <div class="span4">
+        <div class="col-md-4">
 
             <h4>Animated</h4>
 
@@ -1488,7 +1463,7 @@ Yii::app()->user->setFlash('error', '<strong>Oh snap!</strong> Change a few thin
 			<tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr>
 		</thead>
 		<tbody>
-			<tr><td>type</td><td>string</td><td></td><td>Label type. Valid values are <code>success</code>, <code>warning</code>, <code>important</code>, <code>info</code> and <code>inverse</code>.</td></tr>
+			<tr><td>type</td><td>string</td><td></td><td>Label type. Valid values are <code>success</code>, <code>warning</code>, <code>important</code> and <code>info</code>.</td></tr>
 			<tr><td>label</td><td>string</td><td></td><td>Label text.</td></tr>
 			<tr><td>encodeLabel</td><td>boolean</td><td><code>true</code></td><td>Whether to encode the label text.</td></tr>
 			<tr><td>htmlOptions</td><td>array</td><td></td><td>Label HTML attributes.</td></tr>
@@ -1505,13 +1480,12 @@ Yii::app()->user->setFlash('error', '<strong>Oh snap!</strong> Change a few thin
         <?php $this->widget('bootstrap.widgets.TbLabel', array('type'=>'warning', 'label'=>'Warning')); ?>
         <?php $this->widget('bootstrap.widgets.TbLabel', array('type'=>'important', 'label'=>'Important')); ?>
         <?php $this->widget('bootstrap.widgets.TbLabel', array('type'=>'info', 'label'=>'Info')); ?>
-        <?php $this->widget('bootstrap.widgets.TbLabel', array('type'=>'inverse', 'label'=>'Inverse')); ?>
     </p>
 
     <h5>Source code</h5>
 
     <?php echo $phpLighter->highlight("<?php \$this->widget('bootstrap.widgets.TbLabel', array(
-	'type'=>'success', // 'success', 'warning', 'important', 'info' or 'inverse'
+	'type'=>'success', // 'success', 'warning', 'important' or 'info'
 	'label'=>'Success',
 )); ?>"); ?>
 
@@ -1589,7 +1563,7 @@ Yii::app()->user->setFlash('error', '<strong>Oh snap!</strong> Change a few thin
 
     <div class="row">
 
-        <div class="span8">
+        <div class="col-md-8">
 
             <?php $this->widget('bootstrap.widgets.TbCarousel', array(
             'items'=>array(
@@ -1801,7 +1775,7 @@ Yii::app()->user->setFlash('error', '<strong>Oh snap!</strong> Change a few thin
 
     <div class="row">
 
-        <div class="span6">
+        <div class="col-md-6">
 
             <h4>Tabs on the top</h4>
 
@@ -1820,7 +1794,7 @@ Yii::app()->user->setFlash('error', '<strong>Oh snap!</strong> Change a few thin
 
         </div>
 
-        <div class="span6">
+        <div class="col-md-6">
 
             <h4>Tabs on the bottom</h4>
 
