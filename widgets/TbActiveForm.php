@@ -61,7 +61,7 @@ class TbActiveForm extends CActiveForm
 			$this->inlineErrors = $this->type === self::TYPE_HORIZONTAL;
 
 		if ($this->inlineErrors)
-			$this->errorMessageCssClass = 'help-inline error';
+			$this->errorMessageCssClass = 'help-block error';
 		else
 			$this->errorMessageCssClass = 'help-block error';
 
