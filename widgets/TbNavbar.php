@@ -81,9 +81,9 @@ class TbNavbar extends CWidget
 			$this->brandOptions['href'] = CHtml::normalizeUrl($this->brandUrl);
 
 			if (isset($this->brandOptions['class']))
-				$this->brandOptions['class'] .= ' brand';
+				$this->brandOptions['class'] .= ' navbar-brand';
 			else
-				$this->brandOptions['class'] = 'brand';
+				$this->brandOptions['class'] = 'navbar-brand';
 		}
 
 		$classes = array('navbar');
@@ -110,15 +110,16 @@ class TbNavbar extends CWidget
 	public function run()
 	{
 		echo CHtml::openTag('div', $this->htmlOptions);
-		echo '<div class="navbar-inner"><div class="'.$this->getContainerCssClass().'">';
+		echo '<div class="'.$this->getContainerCssClass().'">';
 
 		$collapseId = TbCollapse::getNextContainerId();
 
 		if ($this->collapse !== false)
 		{
-			echo '<a class="btn btn-navbar" data-toggle="collapse" data-target="#'.$collapseId.'">';
+            echo '<div class="navbar-header">';
+			echo '<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#'.$collapseId.'">';
 			echo '<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>';
-			echo '</a>';
+			echo '</button>';
 		}
 
 		if ($this->brand !== false)
@@ -134,10 +135,11 @@ class TbNavbar extends CWidget
 
 		if ($this->collapse !== false)
 		{
+			echo '</div>';
 			$this->controller->beginWidget('bootstrap.widgets.TbCollapse', array(
 				'id'=>$collapseId,
 				'toggle'=>false, // navbars should be collapsed by default
-				'htmlOptions'=>array('class'=>'nav-collapse collapse'),
+				'htmlOptions'=>array('class'=>'navbar-collapse collapse'),
 			));
 		}
 
@@ -160,7 +162,7 @@ class TbNavbar extends CWidget
 		if ($this->collapse !== false)
 			$this->controller->endWidget();
 
-		echo '</div></div></div>';
+		echo '</div></div>';
 	}
 
 	/**

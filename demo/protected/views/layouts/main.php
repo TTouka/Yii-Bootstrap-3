@@ -63,7 +63,7 @@
 						'active'=>Yii::app()->controller->id === 'site' && Yii::app()->controller->action->id === 'index'),
 				array('label'=>'Setup', 'url'=>array('site/setup')),
 			),
-			'htmlOptions'=>array('class'=>'pull-left'),
+			'htmlOptions'=>array('class'=>'pull-left navbar-nav'),
 		),
 		'<div class="add-this pull-right">
 			<!-- AddThis Button BEGIN -->
@@ -84,7 +84,7 @@
 				array('label'=>'Fork me on Bitbucket', 'url'=>'http://www.bitbucket.org/Crisu83/yii-bootstrap', 'linkOptions'=>array('target'=>'_blank')),
 				array('label'=>'Follow me on Twitter', 'url'=>'http://www.twitter.com/Crisu83', 'linkOptions'=>array('target'=>'_blank')),
 			),
-			'htmlOptions'=>array('class'=>'pull-right'),
+			'htmlOptions'=>array('class'=>'pull-right navbar-nav'),
 		),
 	),
 )); ?>
@@ -92,7 +92,7 @@
 <div class="container">
 
 	<div class="row">
-		<div class="span9">
+		<div class="col-md-9">
 
 			<?php $this->beginWidget('bootstrap.widgets.TbHeroUnit', array(
 				'heading'=>Yii::app()->name,
@@ -116,7 +116,7 @@
 
 		</div>
 
-		<div class="span3">
+		<div class="col-md-3">
 			<div class="donate">
 
 				<h3>Support development</h3>
@@ -161,7 +161,7 @@
 
 		<div class="row">
 
-			<div class="span6">
+			<div class="col-md-6">
 
 				<p class="powered">
 					Powered by <?php echo CHtml::link('Yii', 'http://www.yiiframework.com', array('target'=>'_blank')); ?> /
@@ -174,7 +174,7 @@
 
 			</div>
 
-			<div class="span6">
+			<div class="col-md-6">
 
 				<p class="copy">
 					&copy; Christoffer Niska <?php echo date('Y'); ?>

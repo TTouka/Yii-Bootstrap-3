@@ -1961,11 +1961,12 @@ Yii::app()->user->setFlash('error', '<strong>Oh snap!</strong> Change a few thin
 	'fixed'=>'top',
 	'brand'=>false,
 	'collapse'=>true,
-	'htmlOptions'=>array('class'=>'subnav'),
+	'htmlOptions'=>array('class'=>'subnav navbar navbar-default navbar-nav'),
 	'items'=>array(
 		array(
 			'class'=>'bootstrap.widgets.TbMenu',
 			'scrollspy'=>'.navbar',
+            'htmlOptions' => array('class' => 'navbar-nav'),
 			'items'=>array(
 				array('label'=>'Buttons', 'url'=>'#tbButton'),
 				array('label'=>'Buttons groups', 'url'=>'#tbButtonGroup'),
