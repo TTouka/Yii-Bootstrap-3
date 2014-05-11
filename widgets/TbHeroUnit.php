@@ -39,9 +39,9 @@ class TbHeroUnit extends CWidget
 	public function init()
 	{
 		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' hero-unit';
+			$this->htmlOptions['class'] .= ' jumbotron';
 		else
-			$this->htmlOptions['class'] = 'hero-unit';
+			$this->htmlOptions['class'] = 'jumbotron';
 
 		if ($this->encodeHeading)
 			$this->heading = CHtml::encode($this->heading);
