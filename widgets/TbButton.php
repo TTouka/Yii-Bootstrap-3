@@ -36,9 +36,9 @@ class TbButton extends CWidget
 	const TYPE_LINK = 'link';
 
 	// Button sizes.
-	const SIZE_MINI = 'mini';
-	const SIZE_SMALL = 'small';
-	const SIZE_LARGE = 'large';
+	const SIZE_MINI = 'xs';
+	const SIZE_SMALL = 'sm';
+	const SIZE_LARGE = 'lg';
 
 	/**
 	 * @var string the button callback types.
@@ -125,6 +125,8 @@ class TbButton extends CWidget
 
 		if (isset($this->type) && in_array($this->type, $validTypes))
 			$classes[] = 'btn-'.$this->type;
+        else
+            $classes[] = 'btn-default';
 
 		$validSizes = array(self::SIZE_LARGE, self::SIZE_SMALL, self::SIZE_MINI);
 

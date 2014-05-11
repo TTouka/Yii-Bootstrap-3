@@ -210,10 +210,10 @@ p {
   font-size:14px;
   margin-bottom:1.6em;
 }
-.hero-unit { margin-bottom:0; }
-.hero-unit h1 { margin-bottom:0.4em; }
-.hero-unit p { text-align:justify; }
-.hero-unit p:last-child { margin-bottom:0; }
+.jumbotron { margin-bottom:0; }
+.jumbotron h1 { margin-bottom:0.4em; }
+.jumbotron p { text-align:justify; }
+.jumbotron p:last-child { margin-bottom:0; }
 .navbar .add-this {
   margin:6px 0 6px 10px;
   padding:6px 0;
@@ -240,10 +240,10 @@ section a.top {
 #tbTabs .togglable-tabs { margin-bottom:20px; }
 #tbThumbnails .list-view { padding-top:30px; }
 #tbActiveForm .form-vertical .control-group > label { font-weight:bold; }
-#tbHero .hero-unit { width:650px; }
-#tbHero .hero-unit h1 { margin-bottom:0; }
-#tbHero .hero-unit p { margin-bottom:9px; }
-#tbHero .hero-unit p:last-child { margin-bottom:0; }
+#tbHero .jumbotron { width:650px; }
+#tbHero .jumbotron h1 { margin-bottom:0; }
+#tbHero .jumbotron p { margin-bottom:9px; }
+#tbHero .jumbotron p:last-child { margin-bottom:0; }
 #tbCarousel .carousel { width:770px; }
 #tbCarousel .carousel .carousel-caption p { margin-bottom:9px; }
 #tbTypeahead input { margin-bottom:0; }
@@ -253,8 +253,8 @@ section a.top {
   border-color:#eeeeee transparent #eeeeee;
   font-family:"Menlo", "Consolas", "Courier New", Courier, mono;
 }
-.maintenance .hero-unit { text-align:center; }
-.maintenance .hero-unit p { text-align:inherit; }
+.maintenance .jumbotron { text-align:center; }
+.maintenance .jumbotron p { text-align:inherit; }
 @media (max-width: 980px) {
   body { padding-top:0px; }
 }

@@ -45,7 +45,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 		<tbody>
 			<tr><td>buttonType</td><td>string</td><td><code>link</code></td><td>Button callback type. Valid values are <code>link</code>, <code>button</code>, <code>submit</code>, <code>submitLink</code>, <code>reset</code>, <code>ajaxLink</code>, <code>ajaxButton</code> and <code>ajaxSubmit</code>.</td></tr>
 			<tr><td>type</td><td>string</td><td></td><td>Button type. Valid values are <code>primary</code>, <code>info</code>, <code>success</code>, <code>warning</code>, <code>danger</code>, <code>inverse</code> and <code>link</code>.</td></tr>
-			<tr><td>size</td><td>string</td><td></td><td>Button size. Valid values are <code>large</code>, <code>small</code> and <code>mini</code></td></tr>
+			<tr><td>size</td><td>string</td><td></td><td>Button size. Valid values are <code>lg</code>, <code>sm</code> and <code>xs</code></td></tr>
 			<tr><td>icon</td><td>string</td><td></td><td>Button icon, e.g. <code>ok</code> or <code>remove white</code>.</td></tr>
 			<tr><td>label</td><td>string</td><td></td><td>Button label text.</td></tr>
 			<tr><td>url</td><td>string</td><td></td><td>Button URL.</td></tr>
@@ -69,13 +69,13 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 
     <div class="row">
         <div class="span3">
-            <h4>Large</h4>
+            <h4>LG</h4>
             <p>
                 <?php $this->widget('bootstrap.widgets.TbButton', array(
-                    'label'=>'Primary', 'type'=>'primary', 'size'=>'large',
+                    'label'=>'Primary', 'type'=>'primary', 'size'=>'lg',
                 )); ?>
                 <?php $this->widget('bootstrap.widgets.TbButton', array(
-                    'label'=>'Action', 'size'=>'large',
+                    'label'=>'Action', 'size'=>'lg',
                 )); ?>
             </p>
         </div>
@@ -93,25 +93,25 @@ Yii::app()->clientScript->registerScript('siteIndex', "
         </div>
 
         <div class="span3">
-            <h4>Small</h4>
+            <h4>SM</h4>
             <p>
                 <?php $this->widget('bootstrap.widgets.TbButton', array(
-                    'label'=>'Primary', 'type'=>'primary', 'size'=>'small',
+                    'label'=>'Primary', 'type'=>'primary', 'size'=>'sm',
                 )); ?>
                 <?php $this->widget('bootstrap.widgets.TbButton', array(
-                    'label'=>'Action', 'size'=>'small',
+                    'label'=>'Action', 'size'=>'sm',
                 )); ?>
             </p>
         </div>
 
         <div class="span3">
-            <h4>Mini</h4>
+            <h4>XS</h4>
             <p>
                 <?php $this->widget('bootstrap.widgets.TbButton', array(
-                    'label'=>'Primary', 'type'=>'primary', 'size'=>'mini',
+                    'label'=>'Primary', 'type'=>'primary', 'size'=>'xs',
                 )); ?>
                 <?php $this->widget('bootstrap.widgets.TbButton', array(
-                    'label'=>'Action', 'size'=>'mini',
+                    'label'=>'Action', 'size'=>'xs',
                 )); ?>
             </p>
         </div>
@@ -122,7 +122,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
     <?php echo $phpLighter->highlight("<?php \$this->widget('bootstrap.widgets.TbButton', array(
 	'label'=>'Primary',
 	'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-	'size'=>'large', // null, 'large', 'small' or 'mini'
+	'size'=>'lg', // null, 'lg', 'sm' or 'xs'
 )); ?>"); ?>
 
     <h4>Dropdowns</h4>
@@ -1287,7 +1287,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 		<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
 		<p><?php $this->widget('bootstrap.widgets.TbButton', array(
 			'type'=>'primary',
-			'size'=>'large',
+			'size'=>'lg',
 			'label'=>'Learn more',
 		)); ?></p>
 
@@ -1302,7 +1302,7 @@ Yii::app()->clientScript->registerScript('siteIndex', "
 	<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
 	<p><?php \$this->widget('bootstrap.widgets.TbButton', array(
 		'type'=>'primary',
-		'size'=>'large',
+		'size'=>'lg',
 		'label'=>'Learn more',
 	)); ?></p>
 

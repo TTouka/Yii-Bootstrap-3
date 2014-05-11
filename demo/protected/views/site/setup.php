@@ -18,7 +18,7 @@ $this->addMetaProperty('fb:app_id', Yii::app()->fb->appID);
 	<p>
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'type'=>'primary',
-			'size'=>'large',
+			'size'=>'lg',
 			'icon'=>'download-alt white',
 			'label'=>'Download Yii-Bootstrap',
 			'url'=>'http://www.yiiframework.com/extension/bootstrap/',
