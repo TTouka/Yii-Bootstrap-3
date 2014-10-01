@@ -63,7 +63,7 @@ class TbDataColumn extends CDataColumn
             if(is_array($this->filter))
                 echo CHtml::activeDropDownList($this->grid->filter, $this->name, $this->filter, array('id'=>false,'prompt'=>''));
             elseif($this->filter===null)
-                echo CHtml::activeTextField($this->grid->filter, $this->name, array('id'=>false, 'class' => 'col-md-12'));
+                echo CHtml::activeTextField($this->grid->filter, $this->name, array('id'=>false, 'class' => 'col-xs-12'));
         }
         else
             parent::renderFilterCellContent();
